@@ -1,0 +1,24 @@
+{
+  "@pnp/generator-spfx": {
+    "framework": "react",
+    "pnpFramework": "reactjs.plus",
+    "pnp-libraries": [],
+    "pnp-ci": [],
+    "pnp-vetting": [
+      "webpack-analyzer",
+      "stylelint"
+    ],
+    "spfxenv": "spo"
+  },
+  "@microsoft/generator-sharepoint": {
+    "environment": "spo",
+    "framework": "react",
+    "isCreatingSolution": true,
+    "version": "1.8.0",
+    "libraryName": "rwdresize",
+    "libraryId": "02cf1a83-0baf-45f6-9a0c-afb63d38fedd",
+    "packageManager": "npm",
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

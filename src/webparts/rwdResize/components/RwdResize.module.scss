@@ -1,0 +1,19 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+$green: #a7bb38;
+$blue: #318eb1;
+$teal: #20a5ac;
+$yellow: #eeb405;
+$orange: #ee9105;
+$red: #dd314d; // switch to global page scope
+
+.rwdResize {
+  height: 10vh;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  font-weight: bold;
+  justify-content: center;
+  align-self: center;
+  box-sizing: border-box;
+}

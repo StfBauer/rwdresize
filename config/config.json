@@ -1,0 +1,18 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "rwd-resize-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/rwdResize/RwdResizeWebPart.js",
+          "manifest": "./src/webparts/rwdResize/RwdResizeWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "RwdResizeWebPartStrings": "lib/webparts/rwdResize/loc/{locale}.js"
+  }
+}
