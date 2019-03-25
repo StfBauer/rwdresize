@@ -1,5 +1,4 @@
-@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
-
+@import "~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss";
 $green: #a7bb38;
 $blue: #318eb1;
 $teal: #20a5ac;
@@ -7,13 +6,64 @@ $yellow: #eeb405;
 $orange: #ee9105;
 $red: #dd314d; // switch to global page scope
 
+// Mixin to optimise content of web part according to grid columns
+@mixin optimizeWebpart($gridcolumns) {
+  // Set the CSS Module scope to global
+  :global {
+    // inject column setup here e.g. .CanvasSection-xl12
+    #{$gridcolumns} {
+      // switch again the scope to local for the web part
+      // ⚠️☠️ DO NOT ADD ANY OTHER STYLE IN HERE ☠️⚠️
+      :local {
+        // include content of mixin in here
+        @content
+      }
+    }
+  }
+}
+
 .rwdResize {
-  height: 10vh;
+  font-weight: bold;
+
   display: flex;
+
+  box-sizing: border-box;
+  height: 10vh;
+  padding: 1vh;
+
   align-content: center;
   align-items: center;
-  font-weight: bold;
   justify-content: center;
   align-self: center;
-  box-sizing: border-box;
+}
+
+//Canvas Section CanvasSection-xl12
+@include optimizeWebpart(".CanvasSection-xl12") {
+  .rwdResize {
+    color: white;
+    background-color: $red;
+  }
+}
+
+// Canvas Section CanvasSection-xl6
+@include optimizeWebpart(".CanvasSection-xl8") {
+  .rwdResize {
+    background-color: $green;
+  }
+}
+
+// Canvas Section CanvasSection-xl6
+@include optimizeWebpart(".CanvasSection-xl6") {
+  .rwdResize {
+    color: white;
+    background-color: $teal;
+  }
+}
+
+// Canvas Section CanvasSection-xl6
+@include optimizeWebpart(".CanvasSection-xl4") {
+  .rwdResize {
+    color: black;
+    background-color: $yellow;
+  }
 }
