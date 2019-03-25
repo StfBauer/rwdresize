@@ -67,3 +67,34 @@ $red: #dd314d; // switch to global page scope
     background-color: $yellow;
   }
 }
+
+@mixin cardxyz-mobile {
+  font-weight: bold;
+
+  display: flex;
+
+  box-sizing: border-box;
+  height: 10vh;
+  padding: 1vh;
+
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+}
+
+@media screen and (max-width: 480px) {
+  .cardxyz {
+    @include cardxyz-mobile;
+  }
+}
+
+// Canvas Section CanvasSection-xl6
+@include optimizeWebpart(".CanvasSection-xl4") {
+  .cardxyz {
+    @include cardxyz-mobile;
+
+    color: black;
+    background-color: $yellow;
+  }
+}
